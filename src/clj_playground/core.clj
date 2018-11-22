@@ -9,3 +9,8 @@
     [& who]
     :thing
 )
+
+(defn make-thingy
+  [x]
+  (fn [& args] x)
+)
