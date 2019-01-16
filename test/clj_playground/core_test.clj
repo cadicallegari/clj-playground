@@ -19,13 +19,12 @@
 )
 
 
-(deftest thingy-test
-  (testing "always thing"
-    (let [n (rand-int Integer/MAX_VALUE)
-          f (make-thingy n)]
-      (assert (= n (f)))
-      (assert (= n (f :foo)))
-      (assert (= n (apply f :foo (range))))
+(deftest list-replication-test
+  (testing "list replication"
+    (let [n 3
+          l '(1, 2, 3, 4)
+          expected '(1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4)]
+      (is (= expected (list-replication n l)))
     )
   )
 )
