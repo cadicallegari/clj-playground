@@ -14,3 +14,9 @@
   [x]
   (fn [& args] x)
 )
+
+
+(defn list-replication
+  [n l]
+  (mapcat (partial repeat n) l)
+)
